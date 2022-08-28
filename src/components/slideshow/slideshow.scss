@@ -1,0 +1,55 @@
+@import '../../style/theme.scss';
+
+.slideshow {
+    overflow: hidden;
+    position: relative;
+    height: 415px;
+    background-color: $primary-color;
+    border-radius: 10px;
+}
+
+.slideshow-container {
+    display: flex;
+}
+
+.slideshow-container-img {
+    flex-shrink: 0;
+}
+
+.slideshow-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    width: calc(100% - 30px);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.chevron {
+    width: 38px;
+    height: auto;
+    margin: 1rem;
+    color: white;
+}
+
+.chevron:hover {
+    cursor: pointer;
+}
+
+.slideshow-idx {
+    position: absolute;
+    color: white;
+    text-align: center;
+    bottom: 10px;
+    width: 100%;
+    font-family: $font;
+}
+
+
+@media (max-width: 375px) {
+    .slideshow-idx {
+        display: none;
+    }
+}

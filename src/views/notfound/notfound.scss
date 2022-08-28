@@ -1,0 +1,29 @@
+@import '../../style/theme.scss';
+
+.notfound {
+    color: $primary-color;
+    font-family: $font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.notfound > h1 {
+    font-size: 256px;
+}
+
+.notfound > p {
+    font-size: 32px;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.notfound > div {
+    margin-top: 11.2rem;
+    cursor: pointer;
+}
+
+.notfound > div:hover {
+    text-decoration: underline;
+}

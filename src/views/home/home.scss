@@ -1,0 +1,61 @@
+@import '../../style/theme.scss';
+
+* {
+    margin: 0px;
+}
+
+.thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    border-radius: 10px;
+    margin: 3rem 0 3rem 0;
+}
+
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+    .thumbnail-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        border-radius: 10px;
+        justify-items: center;
+        align-items: center;
+    }
+}
+ 
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+    .thumbnail-grid {
+        grid-template-columns: repeat(2, 1fr);
+        background: $secondary-color;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+    .thumbnail-title {
+        top: 75%;
+    }
+    .thumbnail-box {
+        max-width: 32rem;
+    }
+}
+
+/* Big screen devices (1150px and above) */
+@media only screen and (min-width: 1150px) {
+    .thumbnail-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .thumbnail-title {
+        top: 75%;
+    }
+}
+ 
+/* Extra big screen devices (1340px and above) */
+@media only screen and (min-width: 1340px) {
+
+}
