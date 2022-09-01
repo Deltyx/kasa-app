@@ -19,11 +19,11 @@
     padding-top: 2rem;
 }
 
-.notfound > div {
+.notfound > link {
     margin-top: 11.2rem;
     cursor: pointer;
 }
 
-.notfound > div:hover {
+.notfound > link:hover {
     text-decoration: underline;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import './tag.scss';
 
 export default function Tag(props) {
     return (

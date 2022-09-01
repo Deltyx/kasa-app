@@ -1,0 +1,29 @@
+@import '../../style/theme.scss';
+
+.presentation {
+    display: flex;
+    justify-content: space-between;
+    font-family: $font;
+    color: $primary-color;
+    margin-top: 3rem;
+}
+
+.location-header-title {
+    font-size: 42px;
+}
+
+.location-header-subtitle {
+    font-size: 20px;
+}
+
+.tag-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.stars-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
