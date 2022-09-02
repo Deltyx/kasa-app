@@ -2,7 +2,7 @@
 
 .dropdown-container {
     font-family: $font;
-    width: 582px;
+    width: 46%;
     background: $secondary-color;
     border-radius: 10px;
     align-self: center;
@@ -50,7 +50,7 @@
 .dropdown-content {
     color: $primary-color;
     padding: 20px;
-    font-size: 22px;
+    font-size: 18px;
     display: none;
 }
 

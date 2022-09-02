@@ -5,15 +5,23 @@
     justify-content: space-between;
     font-family: $font;
     color: $primary-color;
-    margin-top: 3rem;
+    margin: 3rem 0 3rem 0;
 }
 
 .location-header-title {
-    font-size: 42px;
+    font-size: 38px;
+    max-width: 90%;
+    min-width: 600px;
 }
 
 .location-header-subtitle {
     font-size: 20px;
+}
+
+.location-subheader {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .tag-container {
@@ -26,4 +34,9 @@
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
+}
+
+.dropdown-section {
+    display: flex;
+    justify-content: space-between;
 }

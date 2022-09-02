@@ -6,6 +6,7 @@ import Navbar from "../../components/navbar/navbar";
 import Stars from "../../components/stars/stars";
 import Tag from "../../components/tag/tag"
 import Avatar from "../../components/avatar/avatar";
+import Dropdown from "../../components/dropdown/dropdown";
 
 import { useEffect, useState } from 'react';
 
@@ -15,11 +16,11 @@ export default function Location() {
 
     const [location, setLocation] = useState([]);  
 
-    let id = useParams();
+    let params = useParams(); // retroune un objet avec id 
 
     useEffect(() => {
         
-        fetch('logements.json',
+        fetch('../logements.json', 
         {
             headers : {
                 'Content-Type': 'application/json',
@@ -30,42 +31,41 @@ export default function Location() {
                 return response.json()
             })
             .then((data) => {
-                console.log(data)
-                setLocation(data.find(loc => loc.id === id))
-                /*
-                for (let i=0; i<data.length; i++){
-                    if (data[i].id === id){
-                        setLocation(data[i])
-                    }
-                }
-                */
+              
+               const filteredLocation = data.find(loc => loc.id === params.id)
+               
+                setLocation(filteredLocation)
             })
     }, [])
 
     return (
         <div className="container">
             <Navbar />
-            <Slideshow img={location.pictures}/>
+            <Slideshow img={location.pictures && location.pictures}/>
             <div className="presentation">
                 <div className="location-header">
                     <div>
-                        <h2 className="location-header-title">{location.title}</h2>
-                        <p className="location-header-subtitle">{location.location}</p>
+                        <h2 className="location-header-title">{location.title && location.title}</h2>
+                        <p className="location-header-subtitle">{location.location && location.location}</p>
                     </div>
 
                     <div className="tag-container">
-                        {location.tags.map((tag) => <Tag content={tag} key={tag}/>)}
+                        {location.tags && location.tags.map((tag) => <Tag content={tag} key={tag}/>)}
                     </div>
                 </div>
                 <div className="location-subheader">
                     <div>
-                        <Avatar name={location.host.name} picture={location.host.picture}/>
+                        <Avatar name={location.host && location.host.name} picture={location.host && location.host.picture}/>
                     </div>
 
                     <div className="stars-container">
-                        <Stars rating={location.rating} key={location.id}/>
+                        <Stars rating={location.rating && location.rating} key={location.id && location.id}/>
                     </div>
                 </div>
+            </div>
+            <div className="dropdown-section">
+                <Dropdown style="dropdown-container" title="Description" content={location.description && location.description}/>
+                <Dropdown style="dropdown-container" title="Équipements" content=""/>
             </div>
             <Footer />
         </div>

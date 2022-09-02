@@ -26,13 +26,13 @@ export default function Slideshow(props) {
     return (
         <div className="slideshow">
             <div className="slideshow-container">
-            {props.img.map((picture) => < img className='slideshow-container-img' src={picture} key={picture}/>)}
+                {props.img && props.img.map((picture) => < img className='slideshow-container-img' src={picture} key={picture}/>)}
             </div>
             <div className='slideshow-controls'>
                 <FontAwesomeIcon icon={faChevronLeft} className='chevron' onClick={onPrev}/>
                 <FontAwesomeIcon icon={faChevronRight} className='chevron' onClick={onNext}/>
             </div>
-            <div className='slideshow-idx'>{slideIdx + 1} / {props.img.length}</div>
+            <div className='slideshow-idx'>{slideIdx + 1} / {props.img && props.img.length}</div>
         </div>
     );
 };
