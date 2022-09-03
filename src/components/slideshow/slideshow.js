@@ -33,7 +33,7 @@ export default function Slideshow(props) {
     return (
         <div className="slideshow">
             <div className="slideshow-container" style={{transform: `translateX(-${slideIdx * imgSize()}px)`}}>
-                {props.img && props.img.map((picture) => < img className='slideshow-container-img' src={picture} key={picture}/>)}
+                {props.img && props.img.map((picture) => < img className='slideshow-container-img' src={picture} key={picture} alt={picture}/>)}
             </div>
             <div className='slideshow-controls'>
                 <FontAwesomeIcon icon={faChevronLeft} className='chevron' onClick={onPrev}/>
