@@ -6,6 +6,13 @@ import './slideshow.scss';
 export default function Slideshow(props) {
 
     const [slideIdx, setSlideIdx] = useState(0);
+    const imgSize = () => {
+        const slideshowImg = document.querySelector('.slideshow-container img');
+        if(!slideshowImg){
+            return 0;
+        }
+        return slideshowImg.width;
+    }
 
     const onNext = () => {
         if(slideIdx === props.img.length - 1){
@@ -25,7 +32,7 @@ export default function Slideshow(props) {
 
     return (
         <div className="slideshow">
-            <div className="slideshow-container">
+            <div className="slideshow-container" style={{transform: `translateX(-${slideIdx * imgSize()}px)`}}>
                 {props.img && props.img.map((picture) => < img className='slideshow-container-img' src={picture} key={picture}/>)}
             </div>
             <div className='slideshow-controls'>

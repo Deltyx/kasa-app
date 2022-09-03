@@ -63,7 +63,13 @@ export default function Location() {
             </div>
             <div className="dropdown-section">
                 <Dropdown style="dropdown-container" title="Description" content={location.description && location.description}/>
-                <Dropdown style="dropdown-container" title="Équipements" content=""/>
+                <Dropdown 
+                    style="dropdown-container" title="Équipements" 
+                    content={
+                        <ul>
+                            {location.equipments && location.equipments.map((equipments) => <li key={equipments}>{equipments}</li>)}
+                        </ul>
+                }/>
             </div>
         </div>
     )

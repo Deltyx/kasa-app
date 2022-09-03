@@ -1,1 +1,6 @@
 @import '../../style/theme.scss';
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+}

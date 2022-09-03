@@ -4,7 +4,6 @@
     overflow: hidden;
     position: relative;
     height: 500px;
-    background-color: $primary-color;
     border-radius: 10px;
 }
 
@@ -14,6 +13,9 @@
 
 .slideshow-container-img {
     flex-shrink: 0;
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .slideshow-controls {
