@@ -1,4 +1,5 @@
-import React, { Link } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../img/kasa_logo.jpg"
 import './navbar.scss';
 
@@ -7,8 +8,8 @@ export default function Navbar() {
         <nav className="navbar-container">
             <img className="navbar-logo" src={logo} alt={logo}></img>
             <div className="navbar-links">
-                <span className="navbar-home">Accueil</span>
-                <span className="navbar-about">A Propos</span>
+                <Link to={"/"} className="navbar-home">Accueil</Link>
+                <Link to={"/a_propos"} className="navbar-about">A Propos</Link>
             </div>
         </nav>
     );
