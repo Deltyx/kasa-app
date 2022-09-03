@@ -1,6 +1,4 @@
 import Thumb from '../../components/thumb/thumb.js';
-import Footer from '../../components/footer/footer.js';
-import Navbar from '../../components/navbar/navbar.js';
 import Banner from '../../components/banner/banner.js';
 
 import Home_Banner from '../../img/home_banner.png'
@@ -30,13 +28,11 @@ export default function Home() {
     }, [])
 
     return (
-        <div className='container'>
-            <Navbar />
+        <div className='home-container'>
             <Banner img={Home_Banner} title="Chez vous, partout et ailleurs"/>
             <div className='thumbnail-grid'>
                 {locations.map((location) => <Thumb key={location.id} location={location}/>)}
             </div>
-            <Footer />
         </div>
     );
 }

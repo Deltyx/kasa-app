@@ -7,10 +7,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: calc(67vh + 2px);
 }
 
 .notfound > h1 {
     font-size: 256px;
+    font-weight: 900;
 }
 
 .notfound > p {
@@ -19,11 +21,13 @@
     padding-top: 2rem;
 }
 
-.notfound > link {
-    margin-top: 11.2rem;
+.link {
+    margin-top: 8rem;
     cursor: pointer;
+    text-decoration: none;
+    color: $primary-color;
 }
 
-.notfound > link:hover {
+.link:hover {
     text-decoration: underline;
 }

@@ -9,7 +9,11 @@
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
     border-radius: 10px;
-    margin: 3rem 0 3rem 0;
+    margin: 3rem 0 0 0;
+}
+
+.home-container {
+    height: 100%;
 }
 
 /* Small screen devices (600px and above) */

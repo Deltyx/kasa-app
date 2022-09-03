@@ -9,40 +9,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5rem -100px 0px -100px;
+    margin: 2rem 0 0 0;
 }
 
 .footer-reserved {
     font-size: 18px;
     text-align: center;
     margin-top: 2rem;
-}
-
-/* Small screen devices (600px and above) */
-@media only screen and (min-width: 600px) {
-
-}
-
-/* Medium screen devices (768px and above) */
-@media only screen and (min-width: 768px) {
-    .footer-container {
-        margin: 5rem -2rem 0px -2rem;
-    }
-}
- 
-/* Big screen devices (889px and above) */
-@media only screen and (min-width: 889px) {
-
-}
-
-/* Big screen devices (1150px and above) */
-@media only screen and (min-width: 1150px) {
-    .footer-container {
-        margin: 5rem -7rem 0px -7rem;
-    }
-}
- 
-/* Extra big screen devices (1340px and above) */
-@media only screen and (min-width: 1340px) {
-
 }

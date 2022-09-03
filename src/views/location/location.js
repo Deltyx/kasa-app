@@ -1,8 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Slideshow from "../../components/slideshow/slideshow";
-import Footer from "../../components/footer/footer";
-import Navbar from "../../components/navbar/navbar";
+
 import Stars from "../../components/stars/stars";
 import Tag from "../../components/tag/tag"
 import Avatar from "../../components/avatar/avatar";
@@ -39,8 +38,7 @@ export default function Location() {
     }, [])
 
     return (
-        <div className="container">
-            <Navbar />
+        <div className="location-container">
             <Slideshow img={location.pictures && location.pictures}/>
             <div className="presentation">
                 <div className="location-header">
@@ -67,7 +65,6 @@ export default function Location() {
                 <Dropdown style="dropdown-container" title="Description" content={location.description && location.description}/>
                 <Dropdown style="dropdown-container" title="Équipements" content=""/>
             </div>
-            <Footer />
         </div>
     )
 }
