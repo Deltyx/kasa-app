@@ -2,7 +2,7 @@
 
 .dropdown-container {
     font-family: $font;
-    width: 46%;
+    width: 100%;
     background: $secondary-color;
     border-radius: 10px;
     align-self: flex-start;
@@ -19,7 +19,7 @@ li {
 
 .dropdown-container-wide {
     font-family: $font;
-    width: 1024px;
+    width: 100%;
     background: $secondary-color;
     border-radius: 10px;
     margin: 1rem 0 1rem 0;
@@ -63,4 +63,14 @@ li {
 
 .dropdown-content.active {
     display: block;
+}
+
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+    .dropdown-container {
+        width: 46%;
+    }
+    .dropdown-container-wide {
+        max-width: 1024px;
+    }
 }

@@ -2,7 +2,7 @@
 
 .presentation {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     font-family: $font;
     color: $primary-color;
     margin: 3rem 0 3rem 0;
@@ -20,8 +20,10 @@
 
 .location-subheader {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
 }
 
 .tag-container {
@@ -38,5 +40,41 @@
 
 .dropdown-section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* Small screen devices (600px and above) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium screen devices (768px and above) */
+@media only screen and (min-width: 768px) {
+
+}
+ 
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+    .presentation {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .location-subheader {
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .dropdown-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Big screen devices (1150px and above) */
+@media only screen and (min-width: 1150px) {
+
+}
+ 
+/* Extra big screen devices (1340px and above) */
+@media only screen and (min-width: 1340px) {
+
 }
