@@ -22,7 +22,6 @@ export default function Home() {
                 return response.json()
             })
             .then((data) => {
-                console.log(data)
                 setLocations(data)
             })
     }, [])

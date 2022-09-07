@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import Slideshow from "../../components/slideshow/slideshow";
 
 import Stars from "../../components/stars/stars";
@@ -31,11 +31,15 @@ export default function Location() {
             })
             .then((data) => {
               
-               const filteredLocation = data.find(loc => loc.id === params.id)
-               
+                const filteredLocation = data.find(loc => loc.id === params.id)
                 setLocation(filteredLocation)
             })
     }, [])
+
+    if(location == undefined ) {
+        console.log(location)
+        return <Navigate to="/notfound" />
+    }
 
     return (
         <div className="location-container">
