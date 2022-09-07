@@ -49,9 +49,15 @@
     font-family: $font;
 }
 
-
-@media (max-width: 375px) {
-    .slideshow-idx {
-        display: none;
+/* Small screen devices (500px and below) */
+@media only screen and (max-width: 500px) {
+    .slideshow {
+        height: 300px;
+    }
+    .slideshow-container-img {
+        height: 300px;
+    }
+    .chevron {
+        width: 24px;
     }
 }

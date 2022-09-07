@@ -11,7 +11,7 @@
 .location-header-title {
     font-size: 38px;
     max-width: 90%;
-    min-width: 600px;
+    min-width: 50%;
 }
 
 .location-header-subtitle {
@@ -30,6 +30,7 @@
     display: flex;
     gap: 0.5rem;
     margin-top: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .stars-container {
@@ -43,14 +44,14 @@
     flex-direction: column;
 }
 
-/* Small screen devices (600px and above) */
-@media only screen and (min-width: 600px) {
-
-}
-
-/* Medium screen devices (768px and above) */
-@media only screen and (min-width: 768px) {
-
+/* Small screen devices (500px and below) */
+@media only screen and (max-width: 500px) {
+    .location-header-title {
+        font-size: 30px;
+    }
+    .presentation {
+        margin: 1rem 0 1rem 0;
+    }
 }
  
 /* Big screen devices (889px and above) */
@@ -67,14 +68,7 @@
         flex-direction: row;
         justify-content: space-between;
     }
-}
-
-/* Big screen devices (1150px and above) */
-@media only screen and (min-width: 1150px) {
-
-}
- 
-/* Extra big screen devices (1340px and above) */
-@media only screen and (min-width: 1340px) {
-
+    .location-header-title {
+        min-width: 80%;
+    }
 }

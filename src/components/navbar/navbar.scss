@@ -36,3 +36,16 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
+/* Small screen devices (500px and below) */
+@media only screen and (max-width: 500px) {
+    .navbar-about {
+        margin-left: 1rem;
+    }
+    .navbar-links {
+        font-size: 18px;
+    }
+    .navbar-logo {
+        height: 55px;
+    }
+}

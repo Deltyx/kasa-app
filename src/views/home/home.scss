@@ -16,11 +16,6 @@
     height: 100%;
 }
 
-/* Small screen devices (600px and above) */
-@media only screen and (min-width: 600px) {
-
-}
-
 /* Medium screen devices (768px and above) */
 @media only screen and (min-width: 768px) {
     .thumbnail-grid {
@@ -47,11 +42,6 @@
     .thumbnail-box {
         max-width: 32rem;
     }
-}
-
-/* Big screen devices (1150px and above) */
-@media only screen and (min-width: 1150px) {
-
 }
  
 /* Extra big screen devices (1340px and above) */
