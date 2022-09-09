@@ -1,21 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from "react-router-dom";
 
 import Footer from './components/footer/footer';
 
 import App from './App';
 
-const base = (
-  <Router>
-    <section>
-      <App />
-      <Footer />
-    </section>
-  </Router> 
-)
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-ReactDOM.render(
-  base, document.getElementById("root")
-)
+root.render(
+  <React.StrictMode>
+    <Router>
+      <section>
+        <App />
+        <Footer />
+      </section>
+    </Router> 
+  </React.StrictMode>
+);
 
